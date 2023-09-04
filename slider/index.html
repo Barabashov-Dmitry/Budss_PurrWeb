@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Carousel</title>
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+ <div class="content">
+  <div class="images">
+   <img src="./img/1.jpg">
+   <img src="./img/2.jpg">
+   <img src="./img/3.jpg">
+   <img src="./img/4.jpg">
+   <img src="./img/5.jpg">
+   <img src="./img/6.jpg">
+   <img src="./img/1.jpg">
+   <img src="./img/2.jpg">
+   <img src="./img/3.jpg">
+   <img src="./img/4.jpg">
+
+  </div>
+  <div class="btm-slides">
+   <span data-btn onclick="btm_slide(1)"></span>
+   <span data-btn onclick="btm_slide(2)"></span>
+   <span data-btn onclick="btm_slide(3)"></span>
+   <span data-btn onclick="btm_slide(4)"></span>
+   <span data-btn onclick="btm_slide(5)"></span>
+   <span data-btn onclick="btm_slide(6)"></span>
+   <span data-btn onclick="btm_slide(7)"></span>
+   <span data-btn onclick="btm_slide(8)"></span>
+   <span data-btn onclick="btm_slide(9)"></span>
+   <span data-btn onclick="btm_slide(10)"></span>
+  </div>
+
+  <div data-btn class="sliders left" onclick="side_slide(-1)">
+   <span class="fas fa-angle-left"></span>
+  </div>
+  <div data-btn class="sliders right" onclick="side_slide(1)">
+   <span class="fas fa-angle-right"></span>
+  </div>
+ </div>
+
+
+
+ <style>
+  * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+  }
+
+  body {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   min-height: 100vh;
+   background-color: rgb(31, 25, 25);
+  }
+
+  .content {
+   height: 600px;
+   width: 600px;
+   position: relative;
+  }
+
+  .content .images {
+   position: relative;
+   height: 100%;
+   width: 100%;
+  }
+
+  .content .images img {
+   position: absolute;
+   inset: 0;
+   height: 100%;
+   width: 100%;
+   opacity: 0;
+   transition: opacity 1s linear 0s;
+  }
+
+  .content .images img.j-show {
+   opacity: 1;
+  }
+
+  .btm-slides {
+   position: absolute;
+   bottom: 20px;
+   left: 50%;
+   transform: translateX(-50%);
+   display: flex;
+  }
+
+  .btm-slides span {
+   height: 15px;
+   width: 50px;
+   border: 2px solid white;
+   margin: 0 3px;
+   cursor: pointer;
+  }
+
+  .btm-slides span.j-active {
+   background-color: rgba(255, 255, 255, 0.6) !important;
+  }
+
+  .sliders {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   width: 45px;
+   cursor: pointer;
+   border: 2px solid white;
+   background: rgba(255, 255, 255, 0.1);
+  }
+
+
+  .sliders:hover {
+   background: rgba(255, 255, 255, 0.2);
+  }
+
+  .right {
+   right: 0;
+  }
+
+  .sliders span {
+   line-height: 41px;
+   font-size: 35px;
+   color: white;
+  }
+ </style>
+
+ <script>
+  const btns = document.querySelectorAll('[data-btn]');
+  const btnsBottom = document.querySelectorAll('.btm-slides span')
+  let block = false;
+  const clickBtnBlock = () => {
+   btns.forEach((el, i) => {
+    block = true;
+   })
+   setTimeout(() => block = false, 1000);
+  }
+  var indexValue = 1;
+  showImg(indexValue);
+  function btm_slide(e) {
+   if (block) return
+   showImg(indexValue = e);
+   clickBtnBlock()
+  }
+  function side_slide(e) {
+   if (block) return
+   showImg(indexValue += e);
+   clickBtnBlock()
+  }
+  function showImg(e) {
+   var i;
+   const img = document.querySelectorAll('.content .images img');
+   const slider = document.querySelectorAll('.btm-slides span');
+   if (e > img.length) { indexValue = 1 }
+   if (e < 1) { indexValue = img.length }
+   for (i = 0; i < img.length; i++) {
+    img[i].classList.remove('j-show');
+   }
+   for (i = 0; i < slider.length; i++) {
+    slider[i].style.background = "rgba(255,255,255,0.1)";
+   }
+   img[indexValue - 1].classList.add('j-show');
+   btnsBottom.forEach(el => el.classList.remove('j-active'))
+   btnsBottom[indexValue - 1].classList.add('j-active')
+  }
+ </script>
+</body>
+
+</html>
