@@ -1,0 +1,2373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="icon" href="./img/favicon.ico" sizes="any">
+ <link rel="icon" href="./img/svg/favicon.svg" type="image/svg+xml">
+ <link rel="apple-touch-icon" href="./img/favicon.png">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="theme-color" content="#181818">
+ <title>Budss</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap&_v=20230902212559"
+  rel="stylesheet">
+ <!-- <link rel="stylesheet" href="./css/style.min.css?_v=20230902212559"> -->
+ <style>
+  :root {
+   --font-f-outfit: 'Outfit', sans-serif;
+   --color-tx-white: #fff;
+   --color-tx-black: #000;
+   --color-tx-gray: #b9b9b9;
+   --color-tx-darkgray: #383838;
+   --color-tx-lightred: #ff6c2d;
+   --color-tx-red: #ec1211;
+   --color-tx-orchid: #954ced;
+   --color-tx-orchid2: #a64ced;
+   --color-bg-white: #fff;
+   --color-bg-light: #f5f5f5;
+   --color-bg-dark: #181818;
+   --color-bg-gray: #b9b9b9;
+   --color-bg-orange: #ffaa4c;
+   --color-bg-orchid: #954ced;
+   --color-bg-orchid2: #a64ced;
+   --color-bg-red: #ec1211;
+   --font-sz-s: 12px;
+   --font-sz-s2: 14px;
+   --font-sz-n: 16px;
+   --font-sz-b: 20px;
+   --font-sz-b2: 24px;
+   --font-sz-lg: 32px;
+   --font-sz-lg2: 36px;
+   --font-sz-lg3: 37px;
+   --font-sz-lg4: 40px;
+   --font-sz-lg5: 48px;
+   --font-sz-g: 64px;
+   --font-sz-g2: 96px;
+   --font-sz-g3: 128px;
+   --font-w-light: 300;
+   --font-w-regular: 400;
+   --font-w-medium: 500;
+   --font-w-semibold: 600;
+   --font-w-bold: 700;
+  }
+
+  button,
+  hr,
+  input {
+   overflow: visible;
+  }
+
+  progress,
+  sub,
+  sup {
+   vertical-align: baseline;
+  }
+
+  [type='checkbox'],
+  [type='radio'],
+  legend {
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+   padding: 0;
+  }
+
+  html {
+   line-height: 1.15;
+   -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+   margin: 0;
+  }
+
+  details,
+  main {
+   display: block;
+  }
+
+  h1 {
+   font-size: 2em;
+   margin: 0.67em 0;
+  }
+
+  hr {
+   -webkit-box-sizing: content-box;
+   box-sizing: content-box;
+   height: 0;
+  }
+
+  code,
+  kbd,
+  pre,
+  samp {
+   font-family: monospace, monospace;
+   font-size: 1em;
+  }
+
+  abbr[title] {
+   border-bottom: none;
+   text-decoration: underline;
+   text-decoration: underline;
+   -webkit-text-decoration: underline dotted;
+   text-decoration: underline dotted;
+  }
+
+  b,
+  strong {
+   font-weight: bolder;
+  }
+
+  small {
+   font-size: 80%;
+  }
+
+  sub,
+  sup {
+   font-size: 75%;
+   line-height: 0;
+   position: relative;
+  }
+
+  sub {
+   bottom: -0.25em;
+  }
+
+  sup {
+   top: -0.5em;
+  }
+
+  img {
+   border-style: none;
+  }
+
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+   font-family: inherit;
+   font-size: 100%;
+   line-height: 1.15;
+   margin: 0;
+  }
+
+  button,
+  select {
+   text-transform: none;
+  }
+
+  [type='button'],
+  [type='reset'],
+  [type='submit'],
+  button {
+   -webkit-appearance: button;
+  }
+
+  [type='button']::-moz-focus-inner,
+  [type='reset']::-moz-focus-inner,
+  [type='submit']::-moz-focus-inner,
+  button::-moz-focus-inner {
+   border-style: none;
+   padding: 0;
+  }
+
+  [type='button']:-moz-focusring,
+  [type='reset']:-moz-focusring,
+  [type='submit']:-moz-focusring,
+  button:-moz-focusring {
+   outline: 1px dotted ButtonText;
+  }
+
+  fieldset {
+   padding: 0.35em 0.75em 0.625em;
+  }
+
+  legend {
+   color: inherit;
+   display: table;
+   max-width: 100%;
+   white-space: normal;
+  }
+
+  textarea {
+   overflow: auto;
+  }
+
+  [type='number']::-webkit-inner-spin-button,
+  [type='number']::-webkit-outer-spin-button {
+   height: auto;
+  }
+
+  [type='search'] {
+   -webkit-appearance: textfield;
+   outline-offset: -2px;
+  }
+
+  [type='search']::-webkit-search-decoration {
+   -webkit-appearance: none;
+  }
+
+  ::-webkit-file-upload-button {
+   -webkit-appearance: button;
+   font: inherit;
+  }
+
+  summary {
+   display: list-item;
+  }
+
+  [hidden],
+  template {
+   display: none;
+  }
+
+  html {
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+  }
+
+  *,
+  :after,
+  :before {
+   -webkit-box-sizing: inherit;
+   box-sizing: inherit;
+  }
+
+  button {
+   cursor: pointer;
+   color: inherit;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ol,
+  p,
+  ul {
+   margin: 0;
+  }
+
+  ol,
+  ul {
+   padding: 0;
+  }
+
+  li {
+   list-style-type: none;
+  }
+
+  a {
+   color: inherit;
+   -webkit-text-decoration: none;
+   text-decoration: none;
+   background-color: transparent;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+   outline: none;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+  }
+
+  address {
+   font-style: normal;
+  }
+
+  blockquote,
+  figure {
+   margin: 0;
+  }
+
+  ::-webkit-scrollbar-button {
+   width: 6px;
+   height: 0;
+  }
+
+  ::-webkit-scrollbar-track {
+   background-color: #181818;
+   background-color: var(--color-bg-dark);
+   -webkit-box-shadow: 0 0 3px #181818 inset;
+   box-shadow: 0 0 3px #181818 inset;
+   -webkit-box-shadow: 0 0 3px var(--color-bg-dark) inset;
+   box-shadow: 0 0 3px var(--color-bg-dark) inset;
+  }
+
+  ::-webkit-scrollbar-thumb {
+   border-radius: 2px;
+   background-color: #fff;
+   background-position: 50%;
+   background-repeat: no-repeat;
+  }
+
+  ::-webkit-resizer {
+   width: 7px;
+   height: 0;
+  }
+
+  ::-webkit-scrollbar {
+   width: 7px;
+  }
+
+  body.page {
+   font-family: 'Outfit', sans-serif;
+   font-family: var(--font-f-outfit);
+   font-weight: 400;
+   font-weight: var(--font-w-regular);
+   font-size: 14px;
+   font-size: var(--font-sz-s2);
+   line-height: 1.2;
+   color: #fff;
+   color: var(--color-tx-white);
+   background-color: #181818;
+   background-color: var(--color-bg-dark);
+  }
+
+  .wrapper,
+  body.page.j-lock {
+   overflow: hidden;
+  }
+
+  .wrapper {
+   position: relative;
+   display: grid;
+   min-height: 100vh;
+   grid-template-columns: minmax(300px, 1fr);
+   grid-template-rows: auto 1fr auto;
+  }
+
+  .container {
+   width: 100%;
+   max-width: 1340px;
+   margin: 0 auto;
+   padding: 0 10px;
+  }
+
+  .v-hide {
+   position: absolute;
+   height: 1px;
+   width: 1px;
+   clip: rect(0 0 0 0);
+   clip-path: polygon(0 0, 0 0, 0 0);
+   -webkit-clip-path: polygon(0 0, 0 0, 0 0);
+   white-space: nowrap;
+   overflow: hidden;
+   border: 0;
+   padding: 0;
+   margin: -1px;
+  }
+
+  .i-wrap {
+   position: relative;
+   display: flex;
+   width: 100%;
+  }
+
+  .i-full {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   -o-object-fit: cover;
+   object-fit: cover;
+   -o-object-position: center;
+   object-position: center;
+  }
+
+  .sect-gap {
+   margin-bottom: 100px;
+  }
+
+  .logo {
+   display: flex;
+   gap: 5px;
+  }
+
+  .logo__img {
+   width: 40px;
+   height: 40px;
+  }
+
+  .logo__text {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 37px;
+   font-size: var(--font-sz-lg3);
+   font-weight: 600;
+   font-weight: var(--font-w-semibold);
+  }
+
+  .title {
+   font-size: 96px;
+   font-size: var(--font-sz-g2);
+   font-weight: 700;
+   font-weight: var(--font-w-bold);
+   line-height: 1.07;
+  }
+
+  .btn {
+   width: 182px;
+   height: 57px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 20px;
+   font-weight: 600;
+   font-weight: var(--font-w-semibold);
+   text-align: center;
+   border-radius: 16px;
+   background-color: #954ced;
+   background-color: var(--color-bg-orchid);
+   -webkit-transition: -webkit-transform 0.1s linear 0s;
+   transition: -webkit-transform 0.1s linear 0s;
+   transition: transform 0.1s linear 0s;
+   transition: transform 0.1s linear 0s, -webkit-transform 0.1s linear 0s;
+  }
+
+  .btn:hover {
+   -webkit-transform: scale(1.03);
+   transform: scale(1.03);
+  }
+
+  .text-bg {
+   position: relative;
+  }
+
+  .text-bg:after {
+   position: absolute;
+   content: '';
+   top: 10px;
+   left: -10px;
+   width: calc(100% + 20px);
+   height: calc(100% - 10px);
+   -webkit-transform: rotate(-2deg);
+   transform: rotate(-2deg);
+   background-color: #a64ced;
+   background-color: var(--color-bg-orchid2);
+   z-index: -1;
+   border-radius: 30px;
+  }
+
+  .cross {
+   position: absolute;
+   width: 40px;
+   height: 40px;
+   background: url(./img/sprite/sprite.svg#cross-gray) 50% / cover no-repeat;
+   cursor: pointer;
+  }
+
+  .header__top {
+   position: relative;
+   height: 38px;
+  }
+
+  .header__top:after {
+   position: absolute;
+   content: '';
+   left: 50%;
+   top: 0;
+   bottom: 0;
+   -webkit-transform: translateX(-50%);
+   transform: translateX(-50%);
+   width: 100vw;
+   background-color: #ffaa4c;
+   background-color: var(--color-bg-orange);
+   z-index: -1;
+  }
+
+  .header__bottom {
+   position: absolute;
+   top: 38px;
+   left: 0;
+   right: 0;
+   background-color: hsla(0, 0%, 9%, 0.5);
+   -webkit-backdrop-filter: blur(5px);
+   backdrop-filter: blur(5px);
+  }
+
+  .header__bottom.j-sticky {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+  }
+
+  .header__bottom-inner {
+   height: 71px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding-left: 5px;
+  }
+
+  .header__bottom-logo-img {
+   -o-object-fit: contain;
+   object-fit: contain;
+  }
+
+  .header__burger {
+   display: none;
+  }
+
+  .header__menu {
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100dvh;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   -webkit-transform: translateY(-100%);
+   transform: translateY(-100%);
+   background-color: #181818;
+   background-color: var(--color-bg-dark);
+   padding: 190px 10px 25px;
+   -webkit-transition: -webkit-transform 0.3s linear 0s;
+   transition: -webkit-transform 0.3s linear 0s;
+   transition: transform 0.3s linear 0s;
+   transition: transform 0.3s linear 0s, -webkit-transform 0.3s linear 0s;
+  }
+
+  .header__menu.j-show {
+   -webkit-transform: translateY(0);
+   transform: translateY(0);
+  }
+
+  .header__menu-btn {
+   width: 100%;
+  }
+
+  .header__menu-navigation {
+   margin: auto 0;
+  }
+
+  .header__menu-cross {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   width: 40px;
+   height: 40px;
+   background: url(./img/sprite/sprite.svg#cross-white) 50% / cover no-repeat;
+  }
+
+  .navigation__list {
+   display: flex;
+   gap: 5px;
+  }
+
+  .navigation__item {
+   height: 100%;
+   width: 100%;
+   max-width: 168px;
+  }
+
+  .navigation__link {
+   height: 38px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 20px 20px 0 0;
+   font-size: 16px;
+   font-size: var(--font-sz-n);
+   font-weight: 500;
+   font-weight: var(--font-w-medium);
+   color: #000;
+   color: var(--color-tx-black);
+   -webkit-transition: background-color 0.1s linear 0s, color 0.1s linear 0s;
+   transition: background-color 0.1s linear 0s, color 0.1s linear 0s;
+  }
+
+  .navigation__link.m-current {
+   background-color: #181818;
+   background-color: var(--color-bg-dark);
+   color: #fff;
+   color: var(--color-tx-white);
+  }
+
+  .navigation__link:hover {
+   background-color: #954ced;
+   background-color: var(--color-bg-orchid);
+   color: #fff;
+   color: var(--color-tx-white);
+  }
+
+  .navigation__link:hover.m-current {
+   background-color: #181818;
+   background-color: var(--color-bg-dark);
+  }
+
+  .navigation-menu__list {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+  }
+
+  .navigation-menu__link {
+   font-size: 20px;
+   font-size: var(--font-sz-b);
+   font-weight: 500;
+   font-weight: var(--font-w-medium);
+  }
+
+  .page__header {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 200;
+  }
+
+  .page__cookies {
+   position: fixed;
+   left: 10px;
+   right: 10px;
+   bottom: 30px;
+   margin: 0 auto;
+   z-index: 300;
+   opacity: 0;
+   visibility: hidden;
+   -webkit-transition: opacity 0.4s linear 0s, visibility 0.4s linear 0s;
+   transition: opacity 0.4s linear 0s, visibility 0.4s linear 0s;
+  }
+
+  .page__cookies.j-show {
+   opacity: 1;
+   visibility: visible;
+  }
+
+  .page__contact,
+  .page__thank {
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100dvh;
+   width: 100vw;
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   z-index: 400;
+   background-color: hsla(0, 0%, 9%, 0.5);
+   -webkit-backdrop-filter: blur(2px);
+   backdrop-filter: blur(2px);
+   overflow-y: auto;
+   padding: 20px 10px;
+  }
+
+  .main__greet {
+   display: flex;
+   margin-bottom: 100px;
+  }
+
+  .main__about {
+   margin-bottom: 50px;
+  }
+
+  .main__phone {
+   margin-bottom: 50px;
+  }
+
+  .main__percent,
+  .main__why {
+   margin-bottom: 100px;
+  }
+
+  .greet {
+   overflow: hidden;
+  }
+
+  .greet__container {
+   position: relative;
+   padding: 189px 0 140px 50px;
+  }
+
+  .greet__info {
+   position: relative;
+   z-index: 10;
+  }
+
+  .greet__info-title {
+   margin-bottom: 20px;
+  }
+
+  .greet__info-title span {
+   display: inline-block;
+   margin-left: 2px;
+  }
+
+  .greet__info-subtitle {
+   font-size: 20px;
+   font-size: var(--font-sz-b);
+   line-height: 1.2;
+   margin-bottom: 40px;
+  }
+
+  .greet__visual {
+   position: absolute;
+   left: 50%;
+   bottom: -10px;
+   -webkit-transform: translateX(120px);
+   transform: translateX(120px);
+   width: 100%;
+   max-width: 890px;
+   aspect-ratio: 1.6513;
+  }
+
+  .about {
+   overflow: hidden;
+  }
+
+  .about__container {
+   position: relative;
+   padding-bottom: 40px;
+  }
+
+  .about__title {
+   margin-bottom: 80px;
+  }
+
+  .about__row {
+   display: flex;
+   justify-content: space-between;
+   gap: 50px;
+   padding-right: 60px;
+  }
+
+  .about__info {
+   flex-shrink: 0;
+   font-size: 36px;
+   font-size: var(--font-sz-lg2);
+   font-weight: 600;
+   font-weight: var(--font-w-semibold);
+   line-height: 1.25;
+  }
+
+  .about__group {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-gap: 65px 70px;
+   gap: 65px 70px;
+  }
+
+  .about__card-img {
+   width: 100px;
+   height: 100px;
+   -o-object-fit: contain;
+   object-fit: contain;
+   -o-object-position: center;
+   object-position: center;
+   margin-bottom: 10px;
+  }
+
+  .about__card-title {
+   font-size: 48px;
+   font-size: var(--font-sz-lg5);
+   font-weight: 700;
+   font-weight: var(--font-w-bold);
+   line-height: 1.07;
+   margin-bottom: 15px;
+  }
+
+  .about__card-text {
+   font-size: 24px;
+   font-size: var(--font-sz-b2);
+  }
+
+  .about__decor {
+   position: absolute;
+   bottom: -200px;
+   left: calc(50% - 1050px);
+   width: 100%;
+   max-width: 755px;
+   aspect-ratio: 1.099;
+  }
+
+  .phone {
+   position: relative;
+   gap: 60px;
+   padding: 100px 0;
+   pointer-events: none;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+  }
+
+  .phone,
+  .phone__marquee {
+   display: flex;
+   flex-direction: column;
+  }
+
+  .phone__marquee-img.m-1 {
+   width: 2088px;
+  }
+
+  .phone__marquee-img.m-2 {
+   width: 3142px;
+  }
+
+  .phone__marquee-img.m-3 {
+   width: 2088px;
+  }
+
+  .phone__wrap {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   -webkit-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+   width: 310px;
+   aspect-ratio: 0.4921;
+   background: url(./img/phone.webp) 50% / contain no-repeat;
+  }
+
+  .phone__wrap-inner {
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   width: calc(100% - 20px);
+   height: calc(100% - 20px);
+   border-radius: 45px;
+   overflow: hidden;
+  }
+
+  .phone__wrap-inner video {
+   position: absolute;
+   top: -10px;
+   left: 0;
+   width: 100%;
+   height: calc(100% + 20px);
+  }
+
+  .percent {
+   background-color: #954ced;
+   background-color: var(--color-bg-orchid);
+  }
+
+  .percent__container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 100px;
+   padding: 40px 0;
+  }
+
+  .percent__col-main {
+   font-size: 64px;
+   font-size: var(--font-sz-g);
+   font-weight: 700;
+   font-weight: var(--font-w-bold);
+   line-height: 1.07;
+   margin-bottom: 15px;
+  }
+
+  .percent__col-text {
+   font-size: 24px;
+   font-size: var(--font-sz-b2);
+   font-weight: 600;
+   font-weight: var(--font-w-semibold);
+  }
+
+  .why__title {
+   font-size: 64px;
+   font-size: var(--font-sz-g);
+   text-align: center;
+   margin-bottom: 20px;
+  }
+
+  .why__subtitle {
+   font-size: 36px;
+   font-size: var(--font-sz-lg2);
+   font-weight: 600;
+   font-weight: var(--font-w-semibold);
+   text-align: center;
+   margin-bottom: 75px;
+  }
+
+  .why__box {
+   display: grid;
+   grid-template-columns: repeat(7, 1fr);
+   grid-gap: 20px;
+   gap: 20px;
+  }
+
+  .why__card {
+   min-height: 362px;
+   display: flex;
+   color: #000;
+   color: var(--color-tx-black);
+   border-radius: 30px;
+   padding: 40px;
+  }
+
+  .why__card.m-1 {
+   justify-content: flex-end;
+   grid-column: 1/5;
+   padding-right: 60px;
+   background: url(./img/svg/why1.svg) 0 100% / contain no-repeat, #f5f5f5;
+   background: url(./img/svg/why1.svg) 0 100% / contain no-repeat,
+    var(--color-bg-light);
+  }
+
+  .why__card.m-2 {
+   grid-column: 5/8;
+   background: url(./img/svg/why3.svg) left 70px bottom/80px no-repeat,
+    url(./img/svg/why4.svg) right 70px bottom/100px no-repeat,
+    url(./img/svg/why5.svg) right top 60px/100px no-repeat, #f5f5f5;
+   background: url(./img/svg/why3.svg) left 70px bottom/80px no-repeat,
+    url(./img/svg/why4.svg) right 70px bottom/100px no-repeat,
+    url(./img/svg/why5.svg) right top 60px/100px no-repeat, var(--color-bg-light);
+  }
+
+  .why__card.m-3 {
+   grid-column: 1/4;
+   background: url(./img/svg/why2.svg) 100% 100%/200px no-repeat, #f5f5f5;
+   background: url(./img/svg/why2.svg) 100% 100%/200px no-repeat,
+    var(--color-bg-light);
+  }
+
+  .why__card.m-4 {
+   grid-column: 4/8;
+   background: url(./img/svg/why6.svg) right 50px bottom/210px no-repeat, #f5f5f5;
+   background: url(./img/svg/why6.svg) right 50px bottom/210px no-repeat,
+    var(--color-bg-light);
+  }
+
+  .why__card-title {
+   font-size: 48px;
+   font-size: var(--font-sz-lg5);
+   font-weight: 600;
+   font-weight: var(--font-w-semibold);
+   line-height: normal;
+   margin-bottom: 20px;
+  }
+
+  .why__card-text {
+   font-size: 20px;
+   font-size: var(--font-sz-b);
+  }
+
+  .grow {
+   background-color: #f5f5f5;
+   background-color: var(--color-bg-light);
+   padding: 100px 0;
+  }
+
+  .grow__container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 40px;
+   border-radius: 60px;
+   border: 1px solid #cfcfcf;
+   padding: 60px 0;
+  }
+
+  .grow__title {
+   font-size: 64px;
+   font-size: var(--font-sz-g);
+   font-weight: 700;
+   font-weight: var(--font-w-bold);
+   color: #000;
+   color: var(--color-tx-black);
+   text-align: center;
+  }
+
+  .brand {
+   background-color: #f5f5f5;
+   background-color: var(--color-bg-light);
+  }
+
+  .brand__container {
+   padding-bottom: 100px;
+  }
+
+  .brand__row {
+   display: flex;
+   color: #000;
+   color: var(--color-tx-black);
+   gap: 40px;
+   margin-bottom: 100px;
+  }
+
+  .brand__info {
+   flex-shrink: 0;
+  }
+
+  .brand__title {
+   font-size: 96px;
+   font-size: var(--font-sz-g2);
+   font-weight: 700;
+   font-weight: var(--font-w-bold);
+   margin-bottom: 15px;
+  }
+
+  .brand__subtitle {
+   font-size: 20px;
+   font-size: var(--font-sz-b);
+  }
+
+  .brand__social {
+   flex-grow: 1;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+  }
+
+  .brand__social-link {
+   position: relative;
+   width: 90px;
+   height: 90px;
+   border-radius: 50%;
+   -webkit-transition: -webkit-transform 0.1s linear 0s;
+   transition: -webkit-transform 0.1s linear 0s;
+   transition: transform 0.1s linear 0s;
+   transition: transform 0.1s linear 0s, -webkit-transform 0.1s linear 0s;
+  }
+
+  .brand__social-link.m-1,
+  .brand__social-link.m-3 {
+   top: -50px;
+  }
+
+  .brand__social-link.m-2,
+  .brand__social-link.m-4 {
+   top: 50px;
+  }
+
+  .brand__social-link:hover {
+   -webkit-transform: scale(1.02);
+   transform: scale(1.02);
+  }
+
+  .brand__partners {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 20px;
+  }
+
+  .brand__partners-link {
+   height: 60px;
+   -webkit-transition: -webkit-transform 0.1s linear 0s;
+   transition: -webkit-transform 0.1s linear 0s;
+   transition: transform 0.1s linear 0s;
+   transition: transform 0.1s linear 0s, -webkit-transform 0.1s linear 0s;
+  }
+
+  .brand__partners-link.m-1 {
+   width: 126px;
+  }
+
+  .brand__partners-link.m-2 {
+   width: 209px;
+  }
+
+  .brand__partners-link.m-3 {
+   width: 182px;
+  }
+
+  .brand__partners-link.m-4 {
+   width: 277px;
+  }
+
+  .brand__partners-link.m-5 {
+   width: 184px;
+  }
+
+  .brand__partners-link:hover {
+   -webkit-transform: scale(1.01);
+   transform: scale(1.01);
+  }
+
+  .brand__partners-link-img {
+   -o-object-fit: contain;
+   object-fit: contain;
+  }
+
+  .cookies {
+   max-width: 1320px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 40px;
+   font-size: 20px;
+   background-color: #fff;
+   border-radius: 16px;
+   -webkit-box-shadow: -10px -5px 30px 0 hsla(0, 0%, 55%, 0.1);
+   box-shadow: -10px -5px 30px 0 hsla(0, 0%, 55%, 0.1);
+   padding: 30px 60px 30px 30px;
+  }
+
+  .cookies__text {
+   max-width: 780px;
+   font-weight: 300;
+   font-weight: var(--font-w-light);
+   color: #383838;
+   color: var(--color-tx-darkgray);
+   line-height: 1.4;
+  }
+
+  .cookies__row {
+   display: flex;
+   gap: 20px;
+  }
+
+  .cookies__btn {
+   min-height: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 16px;
+   font-weight: 600;
+   font-weight: var(--font-w-semibold);
+   border: none;
+   padding: 0 30px;
+  }
+
+  .cookies__btn.m-accept {
+   background-color: #954ced;
+   background-color: var(--color-bg-orchid);
+  }
+
+  .cookies__btn.m-decline {
+   color: #000;
+   color: var(--color-tx-black);
+   border: 2px solid #954ced;
+   border: 2px solid var(--color-bg-orchid);
+   background-color: #fff;
+   background-color: var(--color-bg-white);
+  }
+
+  .cookies__cross {
+   top: 10px;
+   right: 10px;
+  }
+
+  .contact {
+   opacity: 0;
+   visibility: hidden;
+   -webkit-transition: opacity 0.2s linear 0s, visibility 0.2s linear 0s;
+   transition: opacity 0.2s linear 0s, visibility 0.2s linear 0s;
+  }
+
+  .contact.j-show {
+   opacity: 1;
+   visibility: visible;
+  }
+
+  .contact__form {
+   position: relative;
+   width: 100%;
+   max-width: 420px;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   border-radius: 20px;
+   background-color: #fff;
+   background-color: var(--color-bg-white);
+   font-size: 14px;
+   font-size: var(--font-sz-s2);
+   color: #000;
+   color: var(--color-tx-black);
+   padding: 40px;
+   margin: auto;
+  }
+
+  .contact__group {
+   display: flex;
+   flex-direction: column;
+   gap: 4px;
+  }
+
+  .contact__group-title {
+   font-weight: 500;
+   font-weight: var(--font-w-medium);
+  }
+
+  .contact__group-title span {
+   color: #ff6c2d;
+   color: var(--color-tx-lightred);
+  }
+
+  .contact__group-wrap {
+   position: relative;
+  }
+
+  .contact__group-wrap:after {
+   position: absolute;
+   content: '';
+   left: 16px;
+   top: calc(50% - 8px);
+   width: 22px;
+   height: 16px;
+   background: url(./img/sprite/sprite.svg#usa) 50% / cover no-repeat;
+  }
+
+  .contact__group-inp {
+   width: 100%;
+   height: 40px;
+   border-radius: 14px;
+   border: 1px solid #f1f1f1;
+   padding-left: 16px;
+  }
+
+  .contact__group-inp.m-tel {
+   padding-left: 48px;
+  }
+
+  .contact__group-inp::-webkit-input-placeholder {
+   color: #a7a7a7;
+  }
+
+  .contact__group-inp::-moz-placeholder {
+   color: #a7a7a7;
+  }
+
+  .contact__group-inp:-ms-input-placeholder {
+   color: #a7a7a7;
+  }
+
+  .contact__group-inp::-ms-input-placeholder {
+   color: #a7a7a7;
+  }
+
+  .contact__group-inp::placeholder {
+   color: #a7a7a7;
+  }
+
+  .contact__group-inp.j-error {
+   border: 1px solid #ec1211;
+   border: 1px solid var(--color-bg-red);
+  }
+
+  .contact__group-alert {
+   display: none;
+   color: #ec1211;
+   color: var(--color-tx-red);
+  }
+
+  .contact__group-alert.j-show {
+   display: block;
+  }
+
+  .contact__alert {
+   display: none;
+   color: #ec1211;
+   color: var(--color-tx-red);
+  }
+
+  .contact__alert.j-show {
+   display: block;
+  }
+
+  .contact__privacy {
+   font-weight: 300;
+   font-weight: var(--font-w-light);
+   line-height: 1.4;
+  }
+
+  .contact__privacy a {
+   color: #a64ced;
+   color: var(--color-tx-orchid2);
+   -webkit-text-decoration: underline;
+   text-decoration: underline;
+   -webkit-text-decoration-skip-ink: none;
+   text-decoration-skip-ink: none;
+  }
+
+  .contact__submit {
+   color: #fff;
+   color: var(--color-tx-white);
+   border: none;
+  }
+
+  .contact__submit.j-lock {
+   background-color: #b9b9b9;
+   background-color: var(--color-bg-gray);
+  }
+
+  .contact__cross {
+   top: 10px;
+   right: 10px;
+  }
+
+  .thank {
+   opacity: 0;
+   visibility: hidden;
+   -webkit-transition: opacity 0.2s linear 0s, visibility 0.2s linear 0s;
+   transition: opacity 0.2s linear 0s, visibility 0.2s linear 0s;
+  }
+
+  .thank.j-show {
+   opacity: 1;
+   visibility: visible;
+  }
+
+  .thank__inner {
+   position: relative;
+   width: 100%;
+   max-width: 420px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   border-radius: 20px;
+   background-color: #fff;
+   background-color: var(--color-bg-white);
+   font-size: 14px;
+   font-size: var(--font-sz-s2);
+   color: #000;
+   color: var(--color-tx-black);
+   text-align: center;
+   padding: 40px;
+   padding-top: 50px;
+   margin: auto;
+  }
+
+  .thank__img {
+   align-self: center;
+   width: 280px;
+   height: 232px;
+   -o-object-fit: contain;
+   object-fit: contain;
+   -o-object-position: center;
+   object-position: center;
+  }
+
+  .thank__title {
+   font-size: 36px;
+   font-weight: 600;
+   font-weight: var(--font-w-semibold);
+   color: #a64ced;
+   color: var(--color-tx-orchid2);
+  }
+
+  .thank__text {
+   font-size: 24px;
+   color: #444;
+  }
+
+  .thank__btn {
+   width: 100%;
+   color: #fff;
+   color: var(--color-tx-white);
+   border: none;
+  }
+
+  .thank__cross {
+   top: 10px;
+   right: 10px;
+  }
+
+  .footer__top {
+   display: flex;
+   align-items: center;
+   border-bottom: 2px solid #444;
+   padding: 40px 0 30px;
+  }
+
+  .footer__navigation {
+   margin-left: auto;
+  }
+
+  .footer__top-btn {
+   margin-left: auto;
+  }
+
+  .footer__top-row {
+   display: flex;
+   gap: 20px;
+   margin-left: 40px;
+  }
+
+  .footer__top-app {
+   width: 196px;
+   height: 57px;
+   -webkit-transition: -webkit-transform 0.1s linear 0s;
+   transition: -webkit-transform 0.1s linear 0s;
+   transition: transform 0.1s linear 0s;
+   transition: transform 0.1s linear 0s, -webkit-transform 0.1s linear 0s;
+  }
+
+  .footer__top-app:hover {
+   -webkit-transform: scale(1.03);
+   transform: scale(1.03);
+  }
+
+  .footer__top-app-img {
+   -o-object-fit: contain;
+   object-fit: contain;
+  }
+
+  .footer__bottom {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   color: #b9b9b9;
+   color: var(--color-tx-gray);
+   font-weight: 300;
+   font-weight: var(--font-w-light);
+   padding: 20px 0;
+  }
+
+  .footer__bottom-row {
+   display: flex;
+   align-items: center;
+   gap: 20px;
+  }
+
+  .footer__bottom-link {
+   -webkit-text-decoration: underline;
+   text-decoration: underline;
+   -webkit-text-decoration-skip-ink: none;
+   text-decoration-skip-ink: none;
+   -webkit-transition: text-shadow 0.1s linear 0s;
+   transition: text-shadow 0.1s linear 0s;
+  }
+
+  .footer__bottom-link:hover {
+   text-shadow: 0 0 1px #b9b9b9;
+   text-shadow: 0 0 1px var(--color-tx-gray);
+  }
+
+  .navigation-footer__list {
+   display: flex;
+   gap: 40px;
+  }
+
+  .navigation-footer__item.m-mob {
+   display: none;
+  }
+
+  .navigation-footer__link {
+   font-size: 20px;
+   font-size: var(--font-sz-b);
+   font-weight: 500;
+   font-weight: var(--font-w-medium);
+   -webkit-transition: text-shadow 0.1s linear 0s;
+   transition: text-shadow 0.1s linear 0s;
+  }
+
+  .navigation-footer__link:hover {
+   text-shadow: 0 0 1px #fff;
+   text-shadow: 0 0 1px var(--color-tx-white);
+  }
+
+  @media screen and (min-width: 992px) {
+   .grow__title br {
+    display: none;
+   }
+  }
+
+  @media screen and (max-width: 1300px) {
+   .about__card br {
+    display: none;
+   }
+
+   .brand__row {
+    flex-direction: column;
+    gap: 100px;
+    margin-bottom: 200px;
+   }
+
+   .brand__social {
+    justify-content: space-evenly;
+   }
+  }
+
+  @media screen and (max-width: 1200px) {
+   .about__title {
+    margin-bottom: 40px;
+   }
+
+   .about__row {
+    flex-direction: column;
+    padding-right: 0;
+   }
+
+   .about__decor {
+    display: none;
+   }
+
+   .why__box {
+    grid-template-columns: repeat(2, 1fr);
+   }
+
+   .why__card.m-1 {
+    grid-column: auto;
+    background: url(./img/svg/why1.svg) left -70px bottom/250px no-repeat,
+     #f5f5f5;
+    background: url(./img/svg/why1.svg) left -70px bottom/250px no-repeat,
+     var(--color-bg-light);
+   }
+
+   .why__card.m-2 {
+    grid-column: auto;
+   }
+
+   .why__card.m-3 {
+    grid-column: auto;
+   }
+
+   .why__card.m-4 {
+    grid-column: auto;
+    background: url(./img/svg/why6.svg) right 50px bottom/110px no-repeat,
+     #f5f5f5;
+    background: url(./img/svg/why6.svg) right 50px bottom/110px no-repeat,
+     var(--color-bg-light);
+   }
+
+   .footer__top {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 30px 20px;
+    gap: 30px 20px;
+   }
+
+   .footer__navigation {
+    margin: 0 auto;
+   }
+
+   .footer__top-row {
+    grid-column: 1/4;
+    margin: 0 auto;
+   }
+  }
+
+  @media screen and (max-width: 992px) {
+   .container {
+    max-width: 748px;
+   }
+
+   .greet__container {
+    padding: 189px 0 0;
+   }
+
+   .greet__info {
+    margin-bottom: 100px;
+   }
+
+   .greet__visual {
+    position: relative;
+    bottom: 0;
+    -webkit-transform: translateX(-180px);
+    transform: translateX(-180px);
+    width: 700px;
+   }
+
+   .phone__marquee-img.m-mob {
+    display: none;
+   }
+
+   .percent__container {
+    gap: 40px;
+   }
+
+   .why__box {
+    grid-template-columns: 1fr;
+   }
+
+   .why__card.m-1 {
+    background: url(./img/svg/why1.svg) 0 100% / contain no-repeat, #f5f5f5;
+    background: url(./img/svg/why1.svg) 0 100% / contain no-repeat,
+     var(--color-bg-light);
+   }
+
+   .why__card.m-4 {
+    background: url(./img/svg/why6.svg) right 50px bottom/210px no-repeat,
+     #f5f5f5;
+    background: url(./img/svg/why6.svg) right 50px bottom/210px no-repeat,
+     var(--color-bg-light);
+   }
+
+   .brand__partners {
+    flex-wrap: wrap;
+   }
+
+   .cookies__row {
+    flex-direction: column;
+   }
+
+   .footer__bottom-row {
+    display: none;
+   }
+  }
+
+  @media screen and (max-width: 768px) {
+   :root {
+    --font-sz-lg2: 32px;
+    --font-sz-lg3: 32px;
+    --font-sz-lg4: 32px;
+    --font-sz-lg5: 32px;
+    --font-sz-g: 44px;
+    --font-sz-g2: 44px;
+    --font-sz-g3: 44px;
+   }
+
+   .container {
+    max-width: 556px;
+   }
+
+   .main__greet {
+    margin-bottom: 50px;
+   }
+
+   .greet__container {
+    padding: 140px 0 0;
+   }
+
+   .greet__info {
+    margin-bottom: 70px;
+   }
+
+   .about__group {
+    grid-template-columns: 1fr;
+    gap: 60px 70px;
+   }
+
+   .percent__container {
+    flex-direction: column;
+    align-items: flex-start;
+   }
+
+   .percent__col {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+   }
+
+   .percent__col br {
+    display: none;
+   }
+
+   .percent__col-main {
+    margin-bottom: 0;
+   }
+
+   .why__card.m-1 {
+    justify-content: flex-start;
+    background: url(./img/svg/why1-mob.svg) 0 100%/350px no-repeat, #f5f5f5;
+    background: url(./img/svg/why1-mob.svg) 0 100%/350px no-repeat,
+     var(--color-bg-light);
+    padding-right: 20px;
+    padding-bottom: 190px;
+   }
+
+   .why__card.m-2 {
+    background: url(./img/svg/why3.svg) left 30px bottom/80px no-repeat,
+     url(./img/svg/why4.svg) right 80px bottom/100px no-repeat,
+     url(./img/svg/why5.svg) right bottom 30px/60px no-repeat, #f5f5f5;
+    background: url(./img/svg/why3.svg) left 30px bottom/80px no-repeat,
+     url(./img/svg/why4.svg) right 80px bottom/100px no-repeat,
+     url(./img/svg/why5.svg) right bottom 30px/60px no-repeat,
+     var(--color-bg-light);
+    padding-bottom: 120px;
+   }
+
+   .why__card.m-3 {
+    padding-bottom: 100px;
+   }
+
+   .why__card.m-4 {
+    background: url(./img/svg/why6.svg) right 50px bottom/100px no-repeat,
+     #f5f5f5;
+    background: url(./img/svg/why6.svg) right 50px bottom/100px no-repeat,
+     var(--color-bg-light);
+    padding-bottom: 150px;
+   }
+
+   .why__card {
+    min-height: auto;
+    padding: 20px;
+   }
+
+   .why__card br {
+    display: none;
+   }
+
+   .grow {
+    padding: 60px 0;
+   }
+
+   .grow__container {
+    padding: 40px 20px;
+   }
+
+   .brand__row {
+    gap: 50px;
+    margin-bottom: 100px;
+   }
+
+   .brand__social-link.m-1,
+   .brand__social-link.m-3 {
+    top: -30px;
+   }
+
+   .brand__social-link.m-2,
+   .brand__social-link.m-4 {
+    top: 30px;
+   }
+
+   .brand__social-link {
+    width: 64px;
+    height: 64px;
+   }
+
+   .cookies {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 40px 30px 30px;
+   }
+
+   .cookies__btn {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+   }
+
+   .footer__top {
+    grid-template-columns: 1fr;
+   }
+
+   .footer__navigation {
+    margin: 0;
+   }
+
+   .footer__top-btn {
+    margin: 0;
+   }
+
+   .footer__top-row {
+    grid-column: auto;
+    margin: 0;
+    flex-wrap: wrap;
+   }
+  }
+
+  @media screen and (max-width: 576px) {
+   :root {
+    --font-sz-b: 16px;
+    --font-sz-b2: 16px;
+    --font-sz-lg: 24px;
+    --font-sz-lg2: 24px;
+    --font-sz-lg3: 24px;
+    --font-sz-lg4: 24px;
+    --font-sz-lg5: 32px;
+    --font-sz-g: 40px;
+    --font-sz-g2: 40px;
+    --font-sz-g3: 40px;
+   }
+
+   .logo__img {
+    width: 30px;
+    height: 30px;
+   }
+
+   .header__bottom-inner {
+    height: 60px;
+   }
+
+   .header__bottom-btn {
+    display: none;
+   }
+
+   .header__burger {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 20px;
+    margin-left: auto;
+    cursor: pointer;
+   }
+
+   .header__burger span {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    background-color: var(--color-bg-white);
+    -webkit-transition: opacity 0.3s linear 0s, -webkit-transform 0.3s linear 0s;
+    transition: opacity 0.3s linear 0s, -webkit-transform 0.3s linear 0s;
+    transition: transform 0.3s linear 0s, opacity 0.3s linear 0s;
+    transition: transform 0.3s linear 0s, opacity 0.3s linear 0s,
+     -webkit-transform 0.3s linear 0s;
+    border-radius: 5px;
+   }
+
+   .header__burger:after {
+    top: 0;
+    -webkit-transition: top 0.3s linear 0s, -webkit-transform 0.3s linear 0s;
+    transition: top 0.3s linear 0s, -webkit-transform 0.3s linear 0s;
+    transition: transform 0.3s linear 0s, top 0.3s linear 0s;
+    transition: transform 0.3s linear 0s, top 0.3s linear 0s,
+     -webkit-transform 0.3s linear 0s;
+   }
+
+   .header__burger:after,
+   .header__burger:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    background-color: var(--color-bg-white);
+    border-radius: 5px;
+   }
+
+   .header__burger:before {
+    bottom: 0;
+    -webkit-transition: bottom 0.3s linear 0s, -webkit-transform 0.3s linear 0s;
+    transition: bottom 0.3s linear 0s, -webkit-transform 0.3s linear 0s;
+    transition: transform 0.3s linear 0s, bottom 0.3s linear 0s;
+    transition: transform 0.3s linear 0s, bottom 0.3s linear 0s,
+     -webkit-transform 0.3s linear 0s;
+   }
+
+   .header__burger.j-active span {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    opacity: 0;
+   }
+
+   .header__burger.j-active:after {
+    top: 9px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+   }
+
+   .header__burger.j-active:before {
+    bottom: 9px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+   }
+
+   .main__about {
+    margin-bottom: 20px;
+   }
+
+   .greet__info-subtitle br {
+    display: none;
+   }
+
+   .greet__info-btn {
+    width: 100%;
+   }
+
+   .greet__visual {
+    width: 500px;
+    -webkit-transform: translateX(-140px);
+    transform: translateX(-140px);
+   }
+
+   .about__row {
+    gap: 40px;
+   }
+
+   .phone__marquee-img.m-1 {
+    width: 796px;
+   }
+
+   .phone__marquee-img.m-2 {
+    width: 1204px;
+   }
+
+   .phone__marquee-img.m-3 {
+    width: 796px;
+   }
+
+   .phone__wrap {
+    width: 230px;
+   }
+
+   .phone__wrap-inner {
+    border-radius: 30px;
+   }
+
+   .percent__col-text {
+    --font-sz-b2: 20px;
+   }
+
+   .why__card-title {
+    font-weight: 700;
+    font-weight: var(--font-w-bold);
+   }
+
+   .grow__btn {
+    width: 100%;
+   }
+
+   .brand__container {
+    padding-bottom: 80px;
+   }
+
+   .brand__subtitle {
+    --font-sz-b: 20px;
+   }
+
+   .brand__subtitle br {
+    display: none;
+   }
+
+   .brand__partners-link.m-1 {
+    width: 91px;
+    order: 3;
+   }
+
+   .brand__partners-link.m-2 {
+    width: 149px;
+    order: 2;
+   }
+
+   .brand__partners-link.m-3 {
+    width: 131px;
+    order: 1;
+   }
+
+   .brand__partners-link.m-4 {
+    width: 196px;
+    order: 4;
+   }
+
+   .brand__partners-link.m-5 {
+    width: 128px;
+    order: 5;
+   }
+
+   .brand__partners-link {
+    height: 42px;
+   }
+
+   .contact__form {
+    padding: 20px;
+    padding-top: 40px;
+   }
+
+   .thank__inner {
+    padding: 20px;
+    padding-top: 50px;
+   }
+
+   .navigation-footer__list {
+    flex-direction: column;
+    gap: 15px;
+   }
+
+   .navigation-footer__item.m-mob {
+    display: block;
+   }
+
+   .navigation-footer__link {
+    --font-sz-b: 20px;
+   }
+  }
+
+  @media screen and (max-width: 400px) {
+   .contact__submit {
+    width: 100%;
+   }
+  }
+
+  @media screen and (max-width: 340px) {
+   .brand__partners {
+    flex-direction: column;
+    align-items: center;
+   }
+  }
+ </style>
+</head>
+
+<body class="page">
+ <div class="wrapper">
+  <header class="page__header header">
+   <div class="container">
+    <div class="header__container">
+     <nav class="header__top navigation">
+      <ul class="navigation__list">
+       <li class="navigation__item">
+        <a href="#" class="navigation__link m-current">For Business</a>
+       </li>
+       <li class="navigation__item">
+        <a href="#" class="navigation__link">For Customers</a>
+       </li>
+      </ul>
+     </nav>
+     <div class="header__bottom">
+      <div class="container">
+       <div class="header__bottom-inner">
+        <a href="#" class="header__bottom-logo logo">
+         <img class="header__bottom-logo-img logo__img" src="./img/svg/logo.svg" alt="Logo">
+         <p class="header__bottom-logo-text logo__text">budss</p>
+        </a>
+        <a data-form href="#" class="header__bottom-btn btn">Contact sales</a>
+        <div class="header__burger"><span></span></div>
+       </div>
+      </div>
+     </div>
+     <div class="header__menu">
+      <a data-form href="#" class="header__menu-btn btn">Contact sales</a>
+      <nav class="header__menu-navigation navigation-menu">
+       <ul class="navigation-menu__list">
+        <li class="navigation-menu__item">
+         <a href="#" class="navigation-menu__link">For Business</a>
+        </li>
+        <li class="navigation-menu__item">
+         <a href="#" class="navigation-menu__link">For Customers</a>
+        </li>
+        <li class="navigation-menu__item">
+         <a href="#" class="navigation-menu__link">Privacy Policy</a>
+        </li>
+        <li class="navigation-menu__item">
+         <a href="#" class="navigation-menu__link">Terms Of Use - Seller</a>
+        </li>
+        <li class="navigation-menu__item">
+         <a href="#" class="navigation-menu__link">Terms of Use - Sellers & Customers</a>
+        </li>
+       </ul>
+      </nav>
+      <div class="header__menu-cross"></div>
+     </div>
+    </div>
+   </div>
+  </header>
+
+  <main class="page__main main">
+
+   <section class="main__greet greet">
+    <div class="container">
+     <div class="greet__container">
+      <div class="greet__info">
+       <h1 class="greet__info-title title">Everyone<br> is an Inf<span>luencer</span></h1>
+       <p class="greet__info-subtitle">
+        Budss is a payments as a service and WOM engine dedicated<br> to acquisition and retention of customers to your
+        business.
+       </p>
+       <a data-form href="#" class="greet__info-btn btn">Contact sales</a>
+      </div>
+      <div class="greet__visual i-wrap">
+       <img class="greet__visual-img i-full" src="./img/greet.webp" alt="A woman with glasses">
+      </div>
+     </div>
+    </div>
+   </section>
+
+   <section class="main__about about">
+    <div class="container">
+     <div class="about__container">
+      <h2 class="about__title title">About Budss</h2>
+      <div class="about__row">
+       <p class="about__info">Payment as a service,<br> powered seamlessly by<br> our <span class="text-bg">network of
+         shoppers</span></p>
+       <div class="about__group">
+        <div class="about__card">
+         <img class="about__card-img" src="./img/svg/about-icon1.svg" alt="">
+         <h3 class="about__card-title title">Contactless</h3>
+         <p class="about__card-text">Budss uses near field<br> communication (NFC) for<br> making contactless payments.
+         </p>
+        </div>
+        <div class="about__card">
+         <img class="about__card-img" src="./img/svg/about-icon2.svg" alt="">
+         <h3 class="about__card-title title">Increased<br> Buying Power</h3>
+         <p class="about__card-text">Returning customers spend<br> up to 3X more.</p>
+        </div>
+        <div class="about__card">
+         <img class="about__card-img" src="./img/svg/about-icon3.svg" alt="">
+         <h3 class="about__card-title title">Analytics<br> & Insights</h3>
+         <p class="about__card-text">Gain a holistic view into your<br> customers buying behavior<br> & purchasing
+          patterns.
+         </p>
+        </div>
+        <div class="about__card">
+         <img class="about__card-img" src="./img/svg/about-icon4.svg" alt="">
+         <h3 class="about__card-title title">Fraud<br> Protection</h3>
+         <p class="about__card-text">Budss handles all payments<br> with a fraud prevention<br> algorithm to flag high
+          risk<br>
+          purchases & a user set PIN code<br> to keep payment info secure. </p>
+        </div>
+       </div>
+      </div>
+      <img class="about__decor" src="./img/svg/about-bg.svg" alt="" loading="lazy">
+     </div>
+    </div>
+   </section>
+
+   <div class="main__phone phone">
+    <div class="phone__marquee">
+     <div class="phone__marquee-wrap m-1">
+      <img class="phone__marquee-img m-1" src="./img/svg/marquee-top.svg" alt="">
+      <img class="phone__marquee-img m-1 m-mob" src="./img/svg/marquee-top.svg" alt="">
+      <img class="phone__marquee-img m-1 m-mob" src="./img/svg/marquee-top.svg" alt="">
+     </div>
+    </div>
+    <div class="phone__marquee">
+     <div class="phone__marquee-wrap m-2">
+      <img class="phone__marquee-img m-2" src="./img/svg/marquee-middle.svg" alt="">
+      <img class="phone__marquee-img m-2 m-mob" src="./img/svg/marquee-middle.svg" alt="">
+      <img class="phone__marquee-img m-2 m-mob" src="./img/svg/marquee-middle.svg" alt="">
+     </div>
+    </div>
+    <div class="phone__marquee">
+     <div class="phone__marquee-wrap m-3">
+      <img class="phone__marquee-img m-3" src="./img/svg/marquee-bottom.svg" alt="">
+      <img class="phone__marquee-img m-3 m-mob" src="./img/svg/marquee-bottom.svg" alt="">
+      <img class="phone__marquee-img m-3 m-mob" src="./img/svg/marquee-bottom.svg" alt="">
+     </div>
+    </div>
+    <div class="phone__wrap">
+     <div class="phone__wrap-inner">
+      <video class="lazy" autoplay loop muted preload playsinline data-src="./files/phone.webm">
+      </video>
+     </div>
+    </div>
+   </div>
+
+   <div class="main__percent percent">
+    <div class="container">
+     <div class="percent__container">
+      <div class="percent__col">
+       <p class="percent__col-main">15%</p>
+       <p class="percent__col-text">Increase<br> in Purchase Amount</p>
+      </div>
+      <div class="percent__col">
+       <p class="percent__col-main">30%</p>
+       <p class="percent__col-text">Growth<br> in Annual Sales</p>
+      </div>
+      <div class="percent__col">
+       <p class="percent__col-main">10%</p>
+       <p class="percent__col-text">Growth<br> in New Customers</p>
+      </div>
+     </div>
+    </div>
+   </div>
+
+   <section class="main__why why">
+    <div class="container">
+     <div class="why__container">
+      <h2 class="why__title title">Why Budss</h2>
+      <p class="why__subtitle">We Provide Advanced Payment Solutions<br> <span class="text-bg">To Grow Your
+        Business</span>
+      <div class="why__box">
+       <div class="why__card m-1">
+        <div class="why__card-inner">
+         <h3 class="why__card-title title">Turn your<br> customers into<br> loyal influencers</h3>
+         <p class="why__card-text">Budss helps businesses harness the<br> exponential power of loyal customers<br> for
+          acquisition and retention.</p>
+        </div>
+       </div>
+       <div class="why__card m-2">
+        <div class="why__card-inner">
+         <h3 class="why__card-title title">Harness the power<br> of buying in bulk</h3>
+         <p class="why__card-text">Get at least 2X more sales with Budss Buying<br> Groups. Your customer base will
+          grow<br>
+          exponentially as your customers add their<br> friends & family to your personalized group.</p>
+        </div>
+       </div>
+       <div class="why__card m-3">
+        <div class="why__card-inner">
+         <h3 class="why__card-title title">Supercharge<br> Loyalty With Instant<br> Cash Back</h3>
+         <p class="why__card-text">Budss allows for shoppers to earn<br> immediate cash back at their<br> favorite
+          stores.</p>
+        </div>
+       </div>
+       <div class="why__card m-4">
+        <div class="why__card-inner">
+         <h3 class="why__card-title title">Seasoned with AI<br> and Gamification</h3>
+         <p class="why__card-text">AI programming creates a personalized<br> customer journey, offering
+          recommendations<br> for
+          their next purchase and optimizing<br> rewards for after purchase.</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+
+   <div class="main__grow grow">
+    <div class="container">
+     <div class="grow__container">
+      <p class="grow__title title">Let Your<br> Business Grow</p>
+      <a data-form href="#" class="grow__btn btn">Contact sales</a>
+     </div>
+    </div>
+   </div>
+
+   <section class="main__brand brand">
+    <div class="container">
+     <div class="brand__container">
+      <div class="brand__row">
+       <div class="brand__info">
+        <h2 class="brand__title title">Your Brand<br> Awareness Maters</h2>
+        <p class="brand__subtitle">Budss is a husle free solution to put your brand on any digital<br> surface including
+         Instagram, Facebook, Twitter and TikTok</p>
+       </div>
+       <div class="brand__social">
+        <a href="#" class="brand__social-link m-1 i-wrap">
+         <img class="brand__social-link-img i-full" src="./img/svg/social1.svg" alt="facebook" loading="lazy">
+        </a>
+        <a href="#" class="brand__social-link m-2 i-wrap">
+         <img class="brand__social-link-img i-full" src="./img/svg/social2.svg" alt="twitter" loading="lazy">
+        </a>
+        <a href="#" class="brand__social-link m-3 i-wrap">
+         <img class="brand__social-link-img i-full" src="./img/svg/social3.svg" alt="instagram" loading="lazy">
+        </a>
+        <a href="#" class="brand__social-link m-4 i-wrap">
+         <img class="brand__social-link-img i-full" src="./img/svg/social4.svg" alt="TikTok" loading="lazy">
+        </a>
+       </div>
+      </div>
+      <div class="brand__partners">
+       <a href="#" class="brand__partners-link m-1 i-wrap">
+        <img class="brand__partners-link-img i-full" src="./img/svg/partner5.svg" alt="Woocommerce" loading="lazy">
+       </a>
+       <a href="#" class="brand__partners-link m-2 i-wrap">
+        <img class="brand__partners-link-img i-full" src="./img/svg/partner1.svg" alt="Shopify" loading="lazy">
+       </a>
+       <a href="#" class="brand__partners-link m-3 i-wrap">
+        <img class="brand__partners-link-img i-full" src="./img/svg/partner4.svg" alt="Square" loading="lazy">
+       </a>
+       <a href="#" class="brand__partners-link m-4 i-wrap">
+        <img class="brand__partners-link-img i-full" src="./img/svg/partner3.svg" alt="Squarespace" loading="lazy">
+       </a>
+       <a href="#" class="brand__partners-link m-5 i-wrap">
+        <img class="brand__partners-link-img i-full" src="./img/svg/partner2.svg" alt="Clover" loading="lazy">
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+
+  </main>
+
+  <div class="page__cookies cookies">
+   <p class="cookies__text">This website uses cookies to ensure you get the best experience on our website. They also
+    allow us to analyze user behavior in order to constantly improve the website for you.</p>
+   <div class="cookies__row">
+    <button class="cookies__btn m-accept">Accept</button>
+    <button class="cookies__btn m-decline">Decline</button>
+   </div>
+   <div class="cookies__cross cross"></div>
+  </div>
+
+  <div class="page__contact contact">
+   <form action="send.php" method="post" class="contact__form">
+    <div class="contact__group">
+     <p class="contact__group-title">Name <span>*</span></p>
+     <input data-check type="text" class="contact__group-inp" name="name" placeholder="Enter name">
+     <p class="contact__group-alert">This field is required.</p>
+    </div>
+    <div class="contact__group">
+     <p class="contact__group-title">Email <span>*</span></p>
+     <input data-check type="email" class="contact__group-inp" name="email" placeholder="Enter email ">
+     <p class="contact__group-alert">This field is required.</p>
+    </div>
+    <div class="contact__group">
+     <p class="contact__group-title">Phone number <span>*</span></p>
+     <div class="contact__group-wrap">
+      <input data-check type="tel" class="contact__group-inp m-tel" name="tel" placeholder="+1 900 000 00 00 ">
+     </div>
+     <p class="contact__group-alert">This field is required.</p>
+    </div>
+    <div class="contact__group">
+     <p class="contact__group-title">Company</p>
+     <input type="text" class="contact__group-inp" name="company" placeholder="Enter company">
+    </div>
+    <div class="contact__group">
+     <p class="contact__group-title">Website/Store URL</p>
+     <input type="url" class="contact__group-inp" name="url" placeholder="Enter Website/Store URL">
+    </div>
+    <p class="contact__alert">Please fill in all required fields</p>
+    <p class="contact__privacy">By submitting this form you are agreeing to Budss’s <a href="#">Privacy Policy</a> and
+     <a href="#">Terms of Use</a>
+    </p>
+    <button class="contact__submit btn" type="submit">Contact sales</button>
+    <div class="contact__cross cross"></div>
+   </form>
+  </div>
+  <!-- Чтобы появилось благодарственное окно, надо добавить класс j-show. Пример page__thank thank j-show. Закрытие сделал в js -->
+  <div class="page__thank thank">
+   <div class="thank__inner">
+    <img class="thank__img" src="./img/svg/thank.svg" alt="">
+    <p class="thank__title">Thank you!</p>
+    <p class="thank__text">Thank you, we have received your application and will contact you soon!</p>
+    <button class="thank__btn btn">Super!</button>
+    <div class="thank__cross cross"></div>
+   </div>
+  </div>
+  <footer class="page__footer footer">
+   <div class="container">
+    <div class="footer__container">
+     <div class="footer__top">
+      <a href="#" class="footer__top-logo logo">
+       <img class="footer__top-logo-img logo__img" src="./img/svg/logo.svg" alt="Logo">
+       <p class="footer__top-logo-text logo__text">budss</p>
+      </a>
+      <nav class="footer__navigation navigation-footer">
+       <ul class="navigation-footer__list">
+        <li class="navigation-footer__item">
+         <a href="#" class="navigation-footer__link">For Business</a>
+        </li>
+        <li class="navigation-footer__item">
+         <a href="#" class="navigation-footer__link">For Customers</a>
+        </li>
+        <li class="navigation-footer__item m-mob">
+         <a href="#" class="navigation-footer__link">Privacy Policy</a>
+        </li>
+        <li class="navigation-footer__item m-mob">
+         <a href="#" class="navigation-footer__link">Terms Of Use - Seller</a>
+        </li>
+        <li class="navigation-footer__item m-mob">
+         <a href="#" class="navigation-footer__link">Terms of Use - Sellers & Customers</a>
+        </li>
+       </ul>
+      </nav>
+      <a data-form href="#" class="footer__top-btn btn">Contact sales</a>
+      <div class="footer__top-row">
+       <a href="#" class="footer__top-app i-wrap">
+        <img class="footer__top-app-img i-full" src="./img/svg/appstore.svg" alt="App Store" loading="lazy">
+       </a>
+       <a href="#" class="footer__top-app i-wrap">
+        <img class="footer__top-app-img i-full" src="./img/svg/googleplay.svg" alt="App Store" loading="lazy">
+       </a>
+      </div>
+     </div>
+     <div class="footer__bottom">
+      <p class="footer__bottom-copyright">© Copyright 2023, All Rights Reserved by Budss</p>
+      <div class="footer__bottom-row">
+       <a href="#" class="footer__bottom-link">Privacy Policy</a>
+       <a href="#" class="footer__bottom-link">Terms Of Use - Seller</a>
+       <a href="#" class="footer__bottom-link">Terms of Use - Sellers & Customers</a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </footer>
+ </div>
+ <!-- <script src="js/app.min.js?_v=20230902212559"></script> -->
+ <script>
+  (() => {
+   var i = { 732: function (t) { t.exports = function () { "use strict"; function e() { return (e = Object.assign || function (t) { for (var e = 1; e < arguments.length; e++) { var i, s = arguments[e]; for (i in s) Object.prototype.hasOwnProperty.call(s, i) && (t[i] = s[i]) } return t }).apply(this, arguments) } function r(t) { return e({}, Z, t) } function t(t, e) { var i, s = "LazyLoad::Initialized", e = new t(e); try { i = new CustomEvent(s, { detail: { instance: e } }) } catch (t) { (i = document.createEvent("CustomEvent")).initCustomEvent(s, !1, !1, { instance: e }) } window.dispatchEvent(i) } function h(t) { L(t, null) } function u(t) { return null === q(t) } function d(t) { return q(t) === nt } function m(t, e) { K ? t.classList.add(e) : t.className += (t.className ? " " : "") + e } function o(t, e) { t && (t.toLoadCount = e) } function M(t) { for (var e, i = [], s = 0; e = t.children[s]; s += 1)"SOURCE" === e.tagName && i.push(e); return i } function _(t, e) { (t = t.parentNode) && "PICTURE" === t.tagName && M(t).forEach(e) } function z(t, e) { M(t).forEach(e) } function V(t) { delete t[w] } function i(e, t) { var i; W(e) || (i = {}, t.forEach(function (t) { i[t] = e.getAttribute(t) }), e[w] = i) } function p(s, t) { var n; W(s) && (n = ct(s), t.forEach(function (t) { var e, i; e = s, (i = n[t = t]) ? e.setAttribute(t, i) : e.removeAttribute(t) })) } function s(t, e, i) { i && t.setAttribute(e, i) } function $(t, e) { s(t, b, k(t, e.data_sizes)), s(t, a, k(t, e.data_srcset)), s(t, v, k(t, e.data_src)) } function R(t, e) { !e || 0 < e.loadingCount || 0 < e.toLoadCount || S(t.callback_finish, e) } function T(t, e, i) { t.addEventListener(e, i), t.llEvLisnrs[e] = i } function f(t) { if (j(t)) { var e, i = t.llEvLisnrs; for (e in i) { var s = i[e]; _t(t, e, s) } delete t.llEvLisnrs } } function B(t, e, i) { delete t.llTempImage, C(i, -1), i && --i.toLoadCount, I(t, e.class_loading), e.unobserve_completed && x(t, i) } function g(t, e, i) { var s, n, a, r, o; -1 < mt.indexOf(t.tagName) ? (N(a = t, s = e, o = i), s = s, o = o, (n = ut[(a = a).tagName]) && (n(a, s), ht(a, s, o))) : (n = e, a = i, (s = t).llTempImage = document.createElement("IMG"), N(s, n, a), W(o = s) || (o[w] = { backgroundImage: o.style.backgroundImage }), o = a, t = k(e = s, (i = n).data_bg), r = k(e, i.data_bg_hidpi), (r = Q && r ? r : t) && (e.style.backgroundImage = 'url("'.concat(r, '")'), rt(e).setAttribute(v, r), ht(e, i, o)), t = a, i = k(r = s, (e = n).data_bg_multi), o = k(r, e.data_bg_multi_hidpi), (o = Q && o ? o : i) && (r.style.backgroundImage = o, dt(r, e, t)), i = a, (e = k(o = s, (r = n).data_bg_set)) && (t = (e = e.split("|")).map(function (t) { return "image-set(".concat(t, ")") }), o.style.backgroundImage = t.join(), "" === o.style.backgroundImage && (t = e.map(function (t) { return "-webkit-image-set(".concat(t, ")") }), o.style.backgroundImage = t.join()), dt(o, r, i))) } function D(t) { t.removeAttribute(v), t.removeAttribute(a), t.removeAttribute(b) } function Y(t) { _(t, function (t) { p(t, A) }), p(t, A) } function X(t) { return t.use_native && "loading" in HTMLImageElement.prototype } function F(t) { return Array.prototype.slice.call(t) } function l(t) { return t.container.querySelectorAll(t.elements_selector) } function G(t) { return q(t) === E } function P(t, e) { return t = t || l(e), F(t).filter(u) } function n(t, e) { var s, n, i, a, t = r(t); this._settings = t, this.loadingCount = 0, i = t, a = this, U && !X(i) && (a._observer = new IntersectionObserver(function (t) { var c, d; c = i, d = a, t.forEach(function (t) { return t.isIntersecting || 0 < t.intersectionRatio ? (n = t.target, a = t, r = c, o = d, l = 0 <= at.indexOf(q(n)), L(n, "entered"), m(n, r.class_entered), I(n, r.class_exited), r.unobserve_entered && x(n, o), S(r.callback_enter, n, a, o), void (l || g(n, r, o))) : (a = t.target, l = t, n = c, r = d, void (u(a) || (m(a, n.class_exited), o = a, t = l, i = r, (e = n).cancel_on_exit && q(o) === y && "IMG" === o.tagName && (f(o), _(s = o, function (t) { D(t) }), D(s), Y(o), I(o, e.class_loading), C(i, -1), h(o), S(e.callback_cancel, o, t, i)), S(n.callback_exit, a, l, r)))); var e, i, s, n, a, r, o, l }) }, { root: i.container === document ? null : i.container, rootMargin: i.thresholds || i.threshold + "px" })), s = t, n = this, c && (n._onlineHandler = function () { var e, t, i; t = n, i = l(e = s), F(i).filter(G).forEach(function (t) { I(t, e.class_error), h(t) }), t.update() }, window.addEventListener("online", n._onlineHandler)), this.update(e) } var c = "undefined" != typeof window, J = c && !("onscroll" in window) || "undefined" != typeof navigator && /(gle|ing|ro)bot|crawl|spider/i.test(navigator.userAgent), U = c && "IntersectionObserver" in window, K = c && "classList" in document.createElement("p"), Q = c && 1 < window.devicePixelRatio, Z = { elements_selector: ".lazy", container: J || c ? document : null, threshold: 300, thresholds: null, data_src: "src", data_srcset: "srcset", data_sizes: "sizes", data_bg: "bg", data_bg_hidpi: "bg-hidpi", data_bg_multi: "bg-multi", data_bg_multi_hidpi: "bg-multi-hidpi", data_bg_set: "bg-set", data_poster: "poster", class_applied: "applied", class_loading: "loading", class_loaded: "loaded", class_error: "error", class_entered: "entered", class_exited: "exited", unobserve_completed: !0, unobserve_entered: !1, cancel_on_exit: !0, callback_enter: null, callback_exit: null, callback_applied: null, callback_loading: null, callback_loaded: null, callback_error: null, callback_finish: null, callback_cancel: null, use_native: !1, restore_on_error: !1 }, v = "src", a = "srcset", b = "sizes", tt = "poster", w = "llOriginalAttrs", et = "data", y = "loading", it = "loaded", st = "applied", E = "error", nt = "native", k = function (t, e) { return t.getAttribute("data-" + e) }, q = function (t) { return k(t, "ll-status") }, L = function (t, e) { var i; t = t, i = "data-ll-status", null !== e ? t.setAttribute(i, e) : t.removeAttribute(i) }, at = [y, it, st, E], S = function (t, e, i, s) { t && (void 0 === s ? void 0 === i ? t(e) : t(e, i) : t(e, i, s)) }, I = function (t, e) { K ? t.classList.remove(e) : t.className = t.className.replace(new RegExp("(^|\\s+)" + e + "(\\s+|$)"), " ").replace(/^\s+/, "").replace(/\s+$/, "") }, rt = function (t) { return t.llTempImage }, x = function (t, e) { e && (e = e._observer) && e.unobserve(t) }, C = function (t, e) { t && (t.loadingCount += e) }, H = [v], ot = [v, tt], A = [v, a, b], lt = [et], W = function (t) { return !!t[w] }, ct = function (t) { return t[w] }, dt = function (t, e, i) { m(t, e.class_applied), L(t, st), i && (e.unobserve_completed && x(t, e), S(e.callback_applied, t, i)) }, ht = function (t, e, i) { m(t, e.class_loading), L(t, y), i && (C(i, 1), S(e.callback_loading, t, i)) }, ut = { IMG: function (t, e) { _(t, function (t) { i(t, A), $(t, e) }), i(t, A), $(t, e) }, IFRAME: function (t, e) { i(t, H), s(t, v, k(t, e.data_src)) }, VIDEO: function (t, e) { z(t, function (t) { i(t, H), s(t, v, k(t, e.data_src)) }), i(t, ot), s(t, tt, k(t, e.data_poster)), s(t, v, k(t, e.data_src)), t.load() }, OBJECT: function (t, e) { i(t, lt), s(t, et, k(t, e.data_src)) } }, mt = ["IMG", "IFRAME", "VIDEO", "OBJECT"], _t = function (t, e, i) { t.removeEventListener(e, i) }, j = function (t) { return !!t.llEvLisnrs }, N = function (r, o, l) { var t, e, c = rt(r) || r; j(c) || (j(t = c) || (t.llEvLisnrs = {}), e = "VIDEO" === t.tagName ? "loadeddata" : "load", T(t, e, function (t) { var e = 0, i = r, s = o, n = l, a = d(i); B(i, s, n), m(i, s.class_loaded), L(i, it), S(s.callback_loaded, i, n), a || R(s, n), f(c) }), T(t, "error", function (t) { var e = 0, i = r, s = o, n = l, a = d(i); B(i, s, n), m(i, s.class_error), L(i, E), S(s.callback_error, i, n), s.restore_on_error && p(i, A), a || R(s, n), f(c) })) }, pt = { IMG: Y, IFRAME: function (t) { p(t, H) }, VIDEO: function (t) { z(t, function (t) { p(t, H) }), p(t, ot), t.load() }, OBJECT: function (t) { p(t, lt) } }, ft = ["IMG", "IFRAME", "VIDEO"]; if (n.prototype = { update: function (t) { var e, i, s, n, a = this._settings, t = P(t, a); o(this, t.length), !J && U ? X(a) ? (s = a, n = this, t.forEach(function (t) { var e, i; -1 !== ft.indexOf(t.tagName) && (e = s, i = n, (t = t).setAttribute("loading", "lazy"), N(t, e, i), (i = ut[t.tagName]) && i(t, e), L(t, nt)) }), o(n, 0)) : (a = t, (e = this._observer).disconnect(), i = e, a.forEach(function (t) { i.observe(t) })) : this.loadAll(t) }, destroy: function () { this._observer && this._observer.disconnect(), c && window.removeEventListener("online", this._onlineHandler), l(this._settings).forEach(function (t) { V(t) }), delete this._observer, delete this._settings, delete this._onlineHandler, delete this.loadingCount, delete this.toLoadCount }, loadAll: function (t) { var e = this, i = this._settings; P(t, i).forEach(function (t) { x(t, e), g(t, i, e) }) }, restoreAll: function () { var n = this._settings; l(n).forEach(function (t) { var e, i, s; e = n, (s = pt[(i = t = t).tagName]) ? s(i) : W(s = i) && (i = ct(s), s.style.backgroundImage = i.backgroundImage), s = e, u(i = t) || d(i) || (I(i, s.class_entered), I(i, s.class_exited), I(i, s.class_applied), I(i, s.class_loading), I(i, s.class_loaded), I(i, s.class_error)), h(t), V(t) }) } }, n.load = function (t, e) { e = r(e); g(t, e) }, n.resetStatus = function (t) { h(t) }, c) { var gt = n, O = window.lazyLoadOptions; if (O) if (O.length) for (var vt, bt = 0; vt = O[bt]; bt += 1)t(gt, vt); else t(gt, O) } return n }() } }, s = {}; function n(t) { var e = s[t]; return void 0 !== e || (e = s[t] = { exports: {} }, i[t].call(e.exports, e, e.exports, n)), e.exports } (() => {
+    "use strict"; var t = n(732); function l(t, e = document) { return e.getElementsByClassName(t) } function o(i, s, n) { for (let t = 0, e = i.length; t < e; t++)s.call(n, i[t], t) } function c(t, e, i, s) { t.addEventListener(e, i, s) } function e(t, e, i, s) { t.removeEventListener(e, i, s) } function r(t, e, i) { t.setAttribute(e, i) } const d = { css3easing: "linear", delayBeforeStart: 1e3, direction: "left", duplicated: !1, duration: 5e3, gap: 20, pauseOnHover: !1, recalcResize: !1, speed: 0, startVisible: !1 }; let h = 0; class i {
+     constructor(e, i) { if (void 0 === e) throw new Error("el cannot be undefined"); if ("string" == typeof e) throw new Error("el cannot be just a selector"); if (null === e) throw new Error("el cannot be null"); i = { ...d, ...i }, this.el = e, this._loopCount = 3; for (const l in d) { s = e, n = "data-" + d[l]; let t = s.getAttribute(n); null !== t && "" !== t && ("true" !== t && "false" !== t || (t = Boolean(t)), i[l] = t) } i.speed && (i.duration = parseInt(e.clientWidth) / i.speed * 1e3), i.gap = i.duplicated ? parseInt(i.gap) : 0, e.innerHTML = `<div class="js-marquee">${e.innerHTML}</div>`; var s, n, t = l("js-marquee", e)[0]; t.style.marginRight = i.gap + "px", t.style.willChange = "transform", t.style.float = "left", i.duplicated && e.appendChild(t.cloneNode(!0)), e.innerHTML = `<div style="width:100000px" class="js-marquee-wrapper">${e.innerHTML}</div>`; const a = l("js-marquee-wrapper", e)[0], r = "up" === i.direction || "down" === i.direction; this._marqWrap = a, this._vertical = r, this._duration = i.duration, this._opts = i, this._calcSizes(); var t = "marqueeAnimation-" + Math.floor(1e7 * Math.random()), o = this._animationStr(t, i.duration / 1e3, i.delayBeforeStart / 1e3, "infinite"); this._animName = t, this._animStr = o, i.duplicated ? (r ? i.startVisible ? this._marqWrap.style.transform = "translateY(0px)" : this._marqWrap.style.transform = `translateY(${"up" === i.direction ? this._contHeight : -1 * (2 * this._elHeight - i.gap)}px)` : i.startVisible ? this._marqWrap.style.transform = "translateX(0px)" : this._marqWrap.style.transform = `translateX(${"left" === i.direction ? this._contWidth : -1 * (2 * this._elWidth - i.gap)}px)`, i.startVisible || (this._loopCount = 1)) : i.startVisible ? this._loopCount = 2 : r ? this._repositionVert() : this._repositionHor(), c(this.el, "pause", this.pause.bind(this)), c(this.el, "resume", this.resume.bind(this)), i.pauseOnHover && (c(this.el, "mouseover", this.pause.bind(this)), c(this.el, "mouseout", this.resume.bind(this))), this._animEnd = () => { this._animate(r), this.el.dispatchEvent(new CustomEvent("finished")) }, this._instance = h, h++, this._animate(r), i.recalcResize && c(window, "resize", this._recalcResize.bind(this)) } _animationStr(t = "", e = 0, i = 0, s = "") { return t + ` ${e}s ${i}s ${s} ` + this._opts.css3easing } _animate(t = !1) {
+      var e = this._opts; e.duplicated && (1 === this._loopCount ? (n = e.duration, n = t ? "up" === e.direction ? n + this._contHeight / (this._elHeight / n) : 2 * n : "left" === e.direction ? n + this._contWidth / (this._elWidth / n) : 2 * n, this._animStr = this._animationStr(this._animName, n / 1e3, e.delayBeforeStart / 1e3)) : 2 === this._loopCount && (this._animName = this._animName + "0", this._animStr = this._animationStr(this._animName, e.duration / 1e3, 0, "infinite")), this._loopCount++); let i = ""; t ? e.duplicated ? (2 < this._loopCount && (this._marqWrap.style.transform = `translateY(${"up" === e.direction ? 0 : -1 * this._elHeight}px)`), i = `translateY(${"up" === e.direction ? -1 * this._elHeight : 0}px)`) : e.startVisible ? 2 === this._loopCount ? (this._animStr = this._animationStr(this._animName, e.duration / 1e3, e.delayBeforeStart / 1e3), i = `translateY(${"up" === e.direction ? -1 * this._elHeight : this._contHeight}px)`, this._loopCount++) : 3 === this._loopCount && (this._animName = this._animName + "0", this._animStr = this._animationStr(this._animName, this._completeDuration / 1e3, 0, "infinite"), this._repositionVert()) : (this._repositionVert(), i = `translateY(${"up" === e.direction ? -1 * this._marqWrap.clientHeight : this._contHeight}px)`) : e.duplicated ? (2 < this._loopCount && (this._marqWrap.style.transform = `translateX(${"left" === e.direction ? 0 : -1 * this._elWidth}px)`), i = `translateX(${"left" === e.direction ? -1 * this._elWidth : 0}px)`) : e.startVisible ? 2 === this._loopCount ? (this._animStr = this._animationStr(this._animName, e.duration / 1e3, e.delayBeforeStart / 1e3), i = `translateX(${"left" === e.direction ? -1 * this._elWidth : this._contWidth}px)`, this._loopCount++) : 3 === this._loopCount && (this._animName = this._animName + "0", this._animStr = this._animationStr(this._animName, e.duration / 1e3, 0, "infinite"), this._repositionHor()) : (this._repositionHor(), i = `translateX(${"left" === e.direction ? -1 * this._elWidth : this._contWidth}px)`), this.el.dispatchEvent(new CustomEvent("beforeStarting")), this._marqWrap.style.animation = this._animStr; var s, n = `@keyframes ${this._animName} {
+        100% {
+          transform: ${i};
+        }
+      }`, e = ([t = document] = [this._marqWrap], t.querySelectorAll("style")); if (e.length) e[e.length - 1].innerHTML = n; else if (l("marq-wrap-style-" + this._instance).length) l("marq-wrap-style-" + this._instance)[0].innerHTML = n; else { const t = document.createElement("style"); e = t, s = ["marq-wrap-style-" + this._instance], void 0 === e.length ? a(e, ...s) : o(e, t => { a(t, ...s) }), t.innerHTML = n, document.querySelector("head").appendChild(t) } function a(e, ...t) { t.forEach(t => { e.classList.add(t) }) } c(this._marqWrap, "animationiteration", this._animIter.bind(this), { once: !0 }), c(this._marqWrap, "animationend", this._animEnd.bind(this), { once: !0 }), this._status = "running", r(this.el, "data-runningStatus", "resumed")
+     } _animIter() { this.el.dispatchEvent(new CustomEvent("finished")) } _repositionVert() { this._marqWrap.style.transform = `translateY(${"up" === this._opts.direction ? this._contHeight : -1 * this._elHeight}px)` } _repositionHor() { this._marqWrap.style.transform = `translateX(${"left" === this._opts.direction ? this._contWidth : -1 * this._elWidth}px)` } _calcSizes() { const t = this.el, i = this._opts; if (this._vertical) { var e = t.clientHeight; this._contHeight = e, this._marqWrap.removeAttribute("style"), t.style.clientHeight = e + "px"; const n = l("js-marquee", t), a = n.length - 1; o(n, (t, e) => { t.style.float = "none", t.style.marginRight = "0px", i.duplicated && e === a ? t.style.marginBottom = "0px" : t.style.marginBottom = i.gap + "px" }); var s = parseInt(n[0].clientHeight + i.gap); this._elHeight = s, i.startVisible && !i.duplicated ? (this._completeDuration = (s + e) / parseInt(e) * this._duration, i.duration = s / parseInt(e) * this._duration) : i.duration = s / parseInt(e) / parseInt(e) * this._duration } else { const o = parseInt(l("js-marquee", t)[0].clientWidth + i.gap), r = t.clientWidth; this._contWidth = r, this._elWidth = o, i.startVisible && !i.duplicated ? (this._completeDuration = (o + r) / parseInt(r) * this._duration, i.duration = o / parseInt(r) * this._duration) : i.duration = (o + parseInt(r)) / parseInt(r) * this._duration } i.duplicated && (i.duration = i.duration / 2) } _recalcResize() { this._calcSizes(), this._loopCount = 2, this._animEnd() } pause() { this._marqWrap.style.animationPlayState = "paused", this._status = "paused", r(this.el, "data-runningStatus", "paused"), this.el.dispatchEvent(new CustomEvent("paused")) } resume() { this._marqWrap.style.animationPlayState = "running", this._status = "running", r(this.el, "data-runningStatus", "resumed"), this.el.dispatchEvent(new CustomEvent("resumed")) } toggle() { "paused" === this._status ? this.resume() : "running" === this._status && this.pause() } destroy() { e(this.el, "pause", this.pause.bind(this)), e(this.el, "resume", this.resume.bind(this)), this._opts.pauseOnHover && (e(this.el, "mouseover", this.pause.bind(this)), e(this.el, "mouseout", this.resume.bind(this))), e(this._marqWrap, "animationiteration", this._animIter.bind(this), { once: !0 }), e(this._marqWrap, "animationend", this._animEnd.bind(this), { once: !0 }), this._opts.recalcResize && e(window, "resize", this._recalcResize.bind(this)) } refresh() { this._recalcResize() }
+    } class s { constructor() { this.page = document.querySelector("body.page"), this.header = { top: document.querySelector(".header__top"), bottom: document.querySelector(".header__bottom"), burger: document.querySelector(".header__burger"), menu: document.querySelector(".header__menu"), cross: document.querySelector(".header__menu-cross") }, this.marquee = { marq1: document.querySelector(".phone__marquee-wrap.m-1"), marq2: document.querySelector(".phone__marquee-wrap.m-2"), marq3: document.querySelector(".phone__marquee-wrap.m-3") }, this.cookie = { main: document.querySelector(".page__cookies"), accept: document.querySelector(".cookies__btn.m-accept"), decline: document.querySelector(".cookies__btn.m-decline"), cross: document.querySelector(".cookies__cross") }, this.form = { btns: document.querySelectorAll("[data-form]"), wrap: document.querySelector(".page__contact"), cross: document.querySelector(".contact__cross"), fields: document.querySelectorAll("[data-check]"), groupAlert: document.querySelectorAll(".contact__group-alert"), alert: document.querySelector(".contact__alert"), submit: document.querySelector(".contact__submit") }, this.thank = { wrap: document.querySelector(".thank"), btn: document.querySelector(".thank__btn"), cross: document.querySelector(".thank__cross") } } } (new class extends s { play() { new i(this.marquee.marq1, { direction: "right", duplicated: !0, speed: 85, startVisible: !0 }), new i(this.marquee.marq2, { direction: "left", duplicated: !0, speed: 80, startVisible: !0 }), new i(this.marquee.marq3, { direction: "right", duplicated: !0, speed: 75, startVisible: !0, delayBeforeStart: 2e3 }) } start() { this.marquee.marq1 && this.play() } }).start(), (new class extends s { sticky() { window.addEventListener("scroll", () => { window.scrollY > this.header.top.clientHeight ? this.header.bottom.classList.add("j-sticky") : this.header.bottom.classList.remove("j-sticky") }) } start() { this.header.bottom && this.sticky() } }).start(), (new class extends s { show() { this.header.burger.addEventListener("click", () => { this.header.menu.classList.add("j-show") }) } close() { this.header.cross.addEventListener("click", () => { this.header.menu.classList.remove("j-show") }) } start() { this.header.burger && (this.show(), this.close()) } }).start(), (new class extends s { show() { window.addEventListener("DOMContentLoaded", () => { localStorage.getItem("cookie") || setTimeout(() => { this.cookie.main.classList.add("j-show") }, 1e3) }) } close() { this.cookie.main.addEventListener("click", t => { t.target != this.cookie.accept && t.target != this.cookie.decline && t.target != this.cookie.cross || (this.cookie.main.classList.remove("j-show"), localStorage.setItem("cookie", "true")) }) } start() { this.cookie.main && (this.show(), this.close()) } }).start(), (new class extends s { show() { this.form.btns.forEach(t => { t.addEventListener("click", t => { this.header.menu.classList.contains("j-show") ? (t.preventDefault(), this.header.cross.click(), setTimeout(() => { this.form.wrap.classList.add("j-show"), this.page.classList.add("j-lock") }, 500)) : (t.preventDefault(), this.form.wrap.classList.add("j-show"), this.page.classList.add("j-lock")) }) }) } close() { this.form.wrap.addEventListener("click", t => { t.target != this.form.wrap && t.target != this.form.cross || (this.form.wrap.classList.remove("j-show"), this.page.classList.remove("j-lock")) }) } checkField() { this.form.submit.addEventListener("click", t => { Array.from(this.form.fields).some(t => "" == t.value) ? (t.preventDefault(), this.form.fields.forEach((t, e) => { "" == t.value ? (t.classList.add("j-error"), this.form.groupAlert[e].classList.add("j-show")) : (t.classList.remove("j-error"), this.form.groupAlert[e].classList.remove("j-show")) }), this.form.submit.classList.add("j-lock"), this.form.alert.classList.add("j-show")) : (this.form.fields.forEach((t, e) => { t.classList.remove("j-error"), this.form.groupAlert[e].classList.remove("j-show") }), this.form.submit.classList.remove("j-lock"), this.form.alert.classList.remove("j-show")) }) } start() { this.form.wrap && (this.show(), this.close(), this.checkField()) } }).start(), (new class extends s { close() { this.thank.wrap.addEventListener("click", t => { t.target != this.thank.wrap && t.target != this.thank.btn && t.target != this.thank.cross || this.thank.wrap.classList.remove("j-show") }) } start() { this.thank.wrap && this.close() } }).start(), new t({})
+   })()
+  })();
+ </script>
+</body>
+
+</html>
